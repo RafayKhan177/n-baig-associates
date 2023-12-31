@@ -1,43 +1,17 @@
-"use client";
+import Hero from "../components/hero/Hero";
+import ContactUs from "../components/contactUs/ContactUs";
+import FeaturesCards from "../components/feature/Cards";
+import ImageActionBanner from "../components/banner/ActionBanner";
+import ImagesGrids from "../components/gallary/ImagesGrids"
 
-import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-// import {AcmeLogo} from "./AcmeLogo.jsx";
-
-export default function App() {
+export default function page() {
   return (
-    <Navbar shouldHideOnScroll>
-      <NavbarBrand>
-        {/* <AcmeLogo /> */}
-        <p className="font-bold text-inherit">ACME</p>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+    <div>
+      <Hero />
+      <ImagesGrids/>
+      <ImageActionBanner/>
+      <ContactUs />
+      <FeaturesCards />
+    </div>
   );
 }
