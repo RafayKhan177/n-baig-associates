@@ -7,13 +7,9 @@ import {
   Drawer,
   ScrollArea,
   rem,
-  Popover,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
-  IconNotification,
-  IconBook,
-  IconCoin,
   IconBrandFacebook,
   IconBrandInstagram,
   IconPhone,
@@ -29,12 +25,12 @@ import SideButton from "./SideButton";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/", label: "Buy" },
-  { href: "/", label: "Build Your Own" },
+  { href: "/", label: "Rent" },
+  { href: "/", label: "Build Your House" },
   { href: "/", label: "Blogs" },
   { href: "/", label: "Talk To Us" },
   { href: "/", label: "About Us" },
 ];
-
 export default function HeaderMenu() {
   const nav = useRouter();
 
@@ -48,7 +44,7 @@ export default function HeaderMenu() {
   return (
     <Box style={{ overflow: "hidden", position: "relative" }}>
       <Flex
-        bg="#fff"
+        bg="#edf6f9"
         alignItems="center"
         justifyContent="space-between"
         m={0}
@@ -112,6 +108,7 @@ export default function HeaderMenu() {
             style={{ padding: "2px", color: "#fff" }}
             color="#000"
           />
+          {/* Uncomment the following lines if you want to add a phone link */}
           <Link
             href="tel:+92 333 5593694"
             style={{ color: "#000", fontSize: ".7rem" }}
@@ -121,10 +118,8 @@ export default function HeaderMenu() {
           </Link>
         </Flex>
       </Flex>
-      <Link href={"/Contribution"}></Link>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          {/* <MantineLogo size={30} /> */}
           <Link href="/" style={{ width: "12rem" }}>
             <Image
               src="/logo.png"
@@ -143,12 +138,19 @@ export default function HeaderMenu() {
 
           <Group h="100%" gap={0} visibleFrom="sm">
             {navLinks.map((link, index) => (
-              <Link key={index} href={link.href} className={classes.link2}>
+              <Link
+                key={index}
+                href={link.href}
+                style={{ color: "#edf6f9" }}
+                className={classes.link}
+              >
                 {link.label}
               </Link>
             ))}
           </Group>
-
+          <Group h="100%" gap={0} visibleFrom="md">
+            <SideButton />
+          </Group>
           <div
             style={{
               display: "flex",
@@ -156,12 +158,11 @@ export default function HeaderMenu() {
               alignItems: "center",
             }}
           >
-            <SideButton />
             <Burger
               opened={drawerOpened}
               onClick={toggleDrawer}
               hiddenFrom="sm"
-              color={"#000"}
+              color={"#fff"}
             />
           </div>
         </Group>
@@ -186,10 +187,25 @@ export default function HeaderMenu() {
           ))}
         </ScrollArea>
         <Divider my="sm" />
-        {/* <Group justify="center" grow pb="xl" px="md">
-          <UserButton user={user} />
-        </Group> */}
+        <Group justify="center" grow pb="xl" px="md">
+          <SideButton />
+        </Group>
       </Drawer>
+      <Flex
+        alignItems="center"
+        justifyContent={"center"}
+        p={1}
+        bgColor={"#edf6f9"}
+      >
+        <Link
+          href="/Contribution"
+          rel="noopener noreferrer"
+          _hover={{ textDecoration: "none" }}
+          style={{ fontWeight: "900", color: "#000" }}
+        >
+          Build Your Own House
+        </Link>
+      </Flex>
     </Box>
   );
 }

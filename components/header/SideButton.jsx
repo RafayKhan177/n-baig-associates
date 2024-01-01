@@ -7,7 +7,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
-// import {ChevronDownIcon} from './ChevronDownIcon';
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 
 export default function App() {
   const [selectedOption, setSelectedOption] = React.useState(
@@ -39,7 +39,9 @@ export default function App() {
       </Button>
       <Dropdown placement="bottom-end">
         <DropdownTrigger>
-          <Button isIconOnly>{/* <ChevronDownIcon /> */}</Button>
+          <Button isIconOnly>
+            <KeyboardArrowDownRoundedIcon />
+          </Button>
         </DropdownTrigger>
         <DropdownMenu
           disallowEmptySelection
