@@ -21,16 +21,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
 import SideButton from "./SideButton";
+import { navLinks } from "../../static";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/", label: "Buy" },
-  { href: "/", label: "Rent" },
-  { href: "/", label: "Build Your House" },
-  { href: "/", label: "Blogs" },
-  { href: "/", label: "Talk To Us" },
-  { href: "/", label: "About Us" },
-];
 export default function HeaderMenu() {
   const nav = useRouter();
 

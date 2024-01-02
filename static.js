@@ -14,7 +14,6 @@ const PropertiesData = [
     location: "City Center",
     images: [defaultImage, defaultImage, defaultImage],
     features: ["Balcony", "Gym", "Parking"],
-    status: "For Sale",
   },
   {
     id: 2,
@@ -28,8 +27,34 @@ const PropertiesData = [
     location: "Suburbia",
     images: [defaultImage, defaultImage, defaultImage],
     features: ["Garden", "Fireplace", "Swimming Pool"],
-    status: "For Sale",
+  },
+  {
+    id: 3,
+    title: "Modern City Apartment",
+    description:
+      "A stunning and modern apartment located in the heart of the city.",
+    price: 350000,
+    bedrooms: 2,
+    bathrooms: 1.5,
+    size: 1200,
+    location: "City Center",
+    images: [defaultImage, defaultImage, defaultImage],
+    features: ["Balcony", "Gym", "Parking"],
   },
 ];
 
-export { PropertiesData };
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/PropertiesListing", label: "Buy" },
+  { href: "/", label: "Projects" },
+  { href: "/", label: "Services" },
+  { href: "/", label: "News" },
+  { href: "/", label: "Map" },
+  { href: "/BuildYourOwn", label: "Build Your House" },
+  { href: "/Blogs", label: "Blogs" },
+  { href: "/ContactUs", label: "Talk To Us" },
+  { href: "/AboutUs", label: "About Us" },
+  { href: "/", label: "More" },
+];
+
+export { PropertiesData, navLinks };
