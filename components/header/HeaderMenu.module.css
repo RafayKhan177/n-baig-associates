@@ -3,9 +3,9 @@
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   border-bottom: rem(0px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-  background-color: #ffffff;
-  background-image: url('https://th.bing.com/th/id/OIP.0cy3jpUsE_t97AXPyMrXzAHaEo?rs=1&pid=ImgDetMain');
-  background-size: contain; /* Adjust the size as needed */
+  background-color: rgb(12, 12, 12);
+  background-image: url('/images/header/inspiration-geometry.png');
+  background-size: contain;
 }
 
   
