@@ -1,12 +1,47 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import TextTransition, { presets } from "react-text-transition";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  };
+
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
+  const TEXTS = ["lorem10", "Building", "Tree", "Color"];
+
+  const heroContent = {
+    title: "Find Your Dream Home ",
+    subtitle: "Explore Stunning Properties in Your Area",
+    dynamicText: (
+      <TextTransition
+        springConfig={presets.wobbly}
+        style={{ fontSize: "1.3rem", fontWeight: 600 }}
+        className="caret-neutral-900"
+      >
+        {
+          [
+            "Imagine stepping into a sunlit living room, your own haven to unwind. Discover properties that spark joy and ignite your imagination.",
+            "Invest in more than just a property. Invest in a sense of belonging, where shared laughter echoes through the streets and memories are made to last..",
+            "Picture yourself hosting backyard barbecues and raising a family in a space you call home. Start your adventure with us and find the perfect chapter for your life.",
+          ][index % 3]
+        }
+      </TextTransition>
+    ),
+    buttonText: "Search Properties",
+    placeholderText: "Enter your desired location",
+    tryForFreeText: "dsa",
   };
 
   return (
@@ -16,20 +51,13 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🔥 Solid - A Complete SaaS Web Template
+                {heroContent.title}
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                Free Next.js Template for {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  SaaS
-                </span>
+                {heroContent.subtitle}
               </h1>
-              <p>
-                Solid Pro - Packed with all the key integrations you need for
-                swift SaaS startup launch, including - Auth, Database, Sanity
-                Blog, Essential Components, Pages and More. Built-winth -
-                Next.js 13, React 18 and TypeScript.
-              </p>
+
+              <h1>{heroContent.dynamicText}</h1>
 
               <div className="mt-10">
                 <form onSubmit={handleSubmit}>
@@ -45,13 +73,13 @@ const Hero = () => {
                       aria-label="get started button"
                       className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
                     >
-                      Get Started
+                      {heroContent.buttonText}
                     </button>
                   </div>
                 </form>
 
                 <p className="mt-5 text-black dark:text-white">
-                  Try for free no credit card required.
+                  {heroContent.tryForFreeText}{" "}
                 </p>
               </div>
             </div>
@@ -82,7 +110,8 @@ const Hero = () => {
                 <div className=" relative aspect-[700/444] w-full">
                   <Image
                     className="shadow-solid-l dark:hidden"
-                    src="/images/hero/hero-light.svg"
+                    style={{ borderRadius: "1rem" }}
+                    src="https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table_105762-2050.jpg?w=826&t=st=1704568085~exp=1704568685~hmac=aaea52599b79d29e2ac5c862ec731660abe5e43ac42e473995dd44153b254100"
                     alt="Hero"
                     fill
                   />
