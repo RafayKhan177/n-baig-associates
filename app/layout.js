@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
+import Lines from "components/Lines";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,11 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-slate-100">
         <Providers>
           <Header />
+          <Lines />
           {children}
-          <Footer />
         </Providers>
       </body>
     </html>
