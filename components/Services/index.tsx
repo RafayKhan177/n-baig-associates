@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import featuresData from "./featuresData";
+import featuresData from "./servicesData";
 import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
 
@@ -13,11 +13,10 @@ const Feature = () => {
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
-              title: "SOLID FEATURES",
-              subtitle: "Core Features of Solid",
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.`,
+              title: "Our Services",
+              subtitle: "Building Your Dream Space, from Vision to Reality",
+              description:
+                "We offer a comprehensive range of architectural and construction services to bring your ideas to life.",
             }}
           />
           {/* <!-- Section Title End --> */}

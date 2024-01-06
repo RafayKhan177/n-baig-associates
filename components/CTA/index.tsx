@@ -4,6 +4,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const CTA = () => {
+  const ctaContent = {
+    title: "Start Your Property Journey with Us",
+    description:
+      "We're passionate about helping you find or create the perfect property. Let's connect and make your dreams a reality.",
+    buttonText: "Contact Us",
+  };
+
+
   return (
     <>
       {/* <!-- ===== CTA Start ===== --> */}
@@ -29,13 +37,9 @@ const CTA = () => {
               className="animate_left md:w-[70%] lg:w-1/2"
             >
               <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Join With Us Today & Increase Your Productivity
+                {ctaContent.title}
               </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor eros. Donec vitae tortor lacus. Phasellus
-                aliquam ante in maximus.
-              </p>
+              <p>{ctaContent.description}</p>
             </motion.div>
             <motion.div
               variants={{
@@ -67,7 +71,7 @@ const CTA = () => {
                   href="signup.html"
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                 >
-                  Sign up free
+                  {ctaContent.buttonText}
                   <Image
                     width={20}
                     height={20}

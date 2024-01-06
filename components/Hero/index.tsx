@@ -19,8 +19,6 @@ const Hero = () => {
     return () => clearTimeout(intervalId);
   }, []);
 
-  const TEXTS = ["lorem10", "Building", "Tree", "Color"];
-
   const heroContent = {
     title: "Find Your Dream Home ",
     subtitle: "Explore Stunning Properties in Your Area",
@@ -41,7 +39,7 @@ const Hero = () => {
     ),
     buttonText: "Search Properties",
     placeholderText: "Enter your desired location",
-    tryForFreeText: "dsa",
+    tryForFreeText: "",
   };
 
   return (
@@ -59,7 +57,7 @@ const Hero = () => {
 
               <h1>{heroContent.dynamicText}</h1>
 
-              <div className="mt-10">
+              <div className="mt-20">
                 <form onSubmit={handleSubmit}>
                   <div className="flex flex-wrap gap-5">
                     <input

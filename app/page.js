@@ -1,7 +1,7 @@
-
 import Hero from "components/Hero";
 import Brands from "components/Brands";
-import Feature from "components/Features";
+import PropertyListings from "components/PropertyListings";
+import Services from "components/Services";
 import About from "components/About";
 import FeaturesTab from "components/FeaturesTab";
 import FunFact from "components/FunFact";
@@ -18,7 +18,8 @@ export default function Home() {
     <main>
       <Hero />
       <Brands />
-      <Feature />
+      <PropertyListings />
+      <Services />
       <About />
       <FeaturesTab />
       <FunFact />
