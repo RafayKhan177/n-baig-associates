@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -28,36 +29,34 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="index.html" className="relative">
+                <Link href="index.html" className="relative">
                   <Image
-                    width={110}
-                    height={80}
-                    src="/images/logo/logo-light.svg"
+                    width={150}
+                    height={150}
+                    src="/logo.png"
                     alt="Logo"
-                    className="dark:hidden"
+                    className="filter brightness-0 grayscale-100"
                   />
-                  <Image
-                    width={110}
-                    height={80}
-                    src="/images/logo/logo-dark.svg"
-                    alt="Logo"
-                    className="hidden dark:block"
-                  />
-                </a>
+                </Link>
 
                 <p className="mb-10 mt-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
-                  contact
+                  <Link
+                    href="/Services"
+                    className="mb-3 inline-block hover:text-primary"
+                  >
+                    Services
+                  </Link>
                 </p>
-                <a
+                <Link
                   href="#"
-                  className="text-itemtitle font-medium text-black dark:text-white"
+                  className="text-itemtitle font-medium text-black dark:text-white text-xl"
                 >
-                  hello@solid.com
-                </a>
+                  baigassociates@gmail.com
+                </Link>
               </motion.div>
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
@@ -85,36 +84,36 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/Home"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/Projects"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Product
-                      </a>
+                        Projects
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/Properties"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Careers
-                      </a>
+                        Properties
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/Construction"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Pricing
-                      </a>
+                        Construction
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>
@@ -143,36 +142,36 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/Map"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Company
-                      </a>
+                        Map
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/Blogs"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Press media
-                      </a>
+                        Blogs
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/AboutUs"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Our Blog
-                      </a>
+                        About Us
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/ContactUs"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Contact Us
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>
@@ -265,19 +264,19 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-8">
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     English
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     Support
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.div>
@@ -325,7 +324,7 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-5">
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <Link href="#" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -346,10 +345,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <Link href="#" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -370,10 +369,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <Link href="#" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -394,10 +393,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <Link href="#" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -414,7 +413,7 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.div>

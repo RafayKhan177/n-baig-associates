@@ -33,14 +33,14 @@ export default function HeaderMenu() {
     useDisclosure(false);
 
   return (
-    <Box style={{ overflow: "hidden", position: "relative"}}>
+    <Box style={{ overflow: "hidden", position: "relative" }}>
       <Flex
         bg="#edf6f9"
         alignItems="center"
         justifyContent="space-between"
         m={0}
         p={0}
-        textTransform="uppercase"
+        // textTransform="uppercase"
       >
         {/* Social Media Icons */}
         <Flex alignItems="center" px={1}>
@@ -66,10 +66,10 @@ export default function HeaderMenu() {
             />
           </Link>
           <Link
-            href="mailto:your.email@gmail.com"
+            href="mailto:baigassociates@gmail.com"
             ml="1rem"
             style={{
-              color: "#000",
+              color: "#0b090a",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -78,7 +78,7 @@ export default function HeaderMenu() {
           >
             <MailOutlineRoundedIcon
               style={{
-                color: "gray",
+                color: "#0b090a",
                 fontSize: "21px",
                 marginRight: "1rem",
               }}
@@ -92,17 +92,17 @@ export default function HeaderMenu() {
         <Flex
           alignItems="center"
           px={1}
-          style={{ backgroundColor: "lightgray", height: "2rem" }}
+          style={{
+            backgroundColor: "#83c5be",
+            height: "2rem",
+            borderBottomLeftRadius: 15,
+          }}
         >
-          <IconPhone
-            size={22}
-            style={{ padding: "2px", color: "#fff" }}
-            color="#000"
-          />
+          <IconPhone size={22} style={{ padding: "2px" }} color="#0b090a" />
           {/* Uncomment the following lines if you want to add a phone link */}
           <Link
             href="tel:+92 333 5593694"
-            style={{ color: "#000", fontSize: ".7rem" }}
+            style={{ color: "#0b090a", fontSize: ".7rem" }}
             ml="0.5rem"
           >
             +92 333 5593694
@@ -123,6 +123,7 @@ export default function HeaderMenu() {
                 top: 30,
                 width: "auto",
                 height: "5rem",
+                filter: "brightness(0) invert(1) grayscale(1)",
               }}
             />
           </Link>
@@ -141,18 +142,18 @@ export default function HeaderMenu() {
               color={"#fff"}
             />
           </div>
-              <Group h="100%" gap={0} visibleFrom="sm">
-                {navLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    href={link.href}
-                    style={{ color: "#edf6f9" }}
-                    className={classes.link}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </Group>
+          <Group h="100%" gap={0} visibleFrom="sm">
+            {navLinks.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                style={{ color: "#edf6f9" }}
+                className={classes.link}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </Group>
         </Group>
       </header>
 
