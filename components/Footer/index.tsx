@@ -53,7 +53,7 @@ const Footer = () => {
                 </p>
                 <Link
                   href="#"
-                  className="text-itemtitle font-medium text-black dark:text-white text-xl"
+                  className="font-medium text-black dark:text-white text-xl"
                 >
                   baigassociates@gmail.com
                 </Link>
