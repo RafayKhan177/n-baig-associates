@@ -127,18 +127,6 @@ export default function HeaderMenu() {
             />
           </Link>
 
-          <Group h="100%" gap={0} visibleFrom="sm">
-            {navLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                style={{ color: "#edf6f9" }}
-                className={classes.link}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </Group>
           <div
             style={{
               display: "flex",
@@ -153,6 +141,18 @@ export default function HeaderMenu() {
               color={"#fff"}
             />
           </div>
+              <Group h="100%" gap={0} visibleFrom="sm">
+                {navLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    style={{ color: "#edf6f9" }}
+                    className={classes.link}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </Group>
         </Group>
       </header>
 
