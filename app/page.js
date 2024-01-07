@@ -6,7 +6,7 @@ import About from "components/About";
 import FeaturesTab from "components/FeaturesTab";
 import FunFact from "components/FunFact";
 import Integration from "components/Integration";
-import CTA from "components/CTA";
+import SAM from "components/SAM";
 import FAQ from "components/FAQ";
 import Pricing from "components/Pricing";
 import Contact from "components/Contact";
@@ -24,10 +24,10 @@ export default function Home() {
       <FeaturesTab />
       <FunFact />
       <Integration />
-      <CTA />
+      <SAM />
       <FAQ />
       <Testimonial />
-      <Pricing />
+      {/* <Pricing /> */}
       <Contact />
       <Blog />
     </main>

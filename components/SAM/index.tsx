@@ -3,12 +3,12 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const CTA = () => {
+const SAM = () => {
   const ctaContent = {
-    title: "Start Your Property Journey with Us",
+    title: "Schedule a meeting with us!",
     description:
-      "We're passionate about helping you find or create the perfect property. Let's connect and make your dreams a reality.",
-    buttonText: "Contact Us",
+      "With just a few clicks, choose a convenient date and time that suits you and schedule a productive and efficient meeting with our team.",
+    buttonText: "Schedule your meeting",
   };
 
 
@@ -97,4 +97,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default SAM;

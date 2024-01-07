@@ -1,25 +1,17 @@
-"use client";
-
 import {
   Card,
   Text,
   Group,
   Button,
-  rem,
   Image,
-  Container,
-  SimpleGrid,
 } from "@mantine/core";
 import classes from "./CarouselCard.module.css";
 import { motion } from "framer-motion";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import { Badge, Stack } from "@chakra-ui/react";
-import { PropertiesData } from "../../static";
-import SectionHeader from "../Common/SectionHeader";
 
 const SingleListing = ({ item }) => {
-  const { title, description, features, price, images, id } = item;
+  const { title, description, price, images, id } = item;
 
   return (
     <div>
@@ -39,7 +31,6 @@ const SingleListing = ({ item }) => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        // className="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
         key={id}
       >
         <Card

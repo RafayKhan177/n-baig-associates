@@ -1,7 +1,7 @@
 import { Providers } from "./providers";
 import "./globals.css";
 
-import Header from "components/header/Header";
+import Header from "components/Header";
 import Footer from "components/Footer";
 import Lines from "components/Lines";
 

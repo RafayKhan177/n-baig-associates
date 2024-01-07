@@ -20,8 +20,7 @@ import { Flex } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
-import SideButton from "./SideButton";
-import { navLinks } from "../../static";
+import navLinks from "./HeaderLinks";
 
 export default function HeaderMenu() {
   const nav = useRouter();
@@ -34,7 +33,7 @@ export default function HeaderMenu() {
     useDisclosure(false);
 
   return (
-    <Box style={{ overflow: "hidden", position: "relative" }}>
+    <Box style={{ overflow: "hidden", position: "relative"}}>
       <Flex
         bg="#edf6f9"
         alignItems="center"
@@ -115,8 +114,8 @@ export default function HeaderMenu() {
           <Link href="/" style={{ width: "12rem" }}>
             <Image
               src="/logo.png"
-              width={900}
-              height={900}
+              width={700}
+              height={700}
               alt="logo"
               style={{
                 zIndex: 999,
@@ -139,9 +138,6 @@ export default function HeaderMenu() {
                 {link.label}
               </Link>
             ))}
-          </Group>
-          <Group h="100%" gap={0} visibleFrom="md">
-            <SideButton />
           </Group>
           <div
             style={{
@@ -179,9 +175,6 @@ export default function HeaderMenu() {
           ))}
         </ScrollArea>
         <Divider my="sm" />
-        <Group justify="center" grow pb="xl" px="md">
-          <SideButton />
-        </Group>
       </Drawer>
       <Flex
         alignItems="center"
