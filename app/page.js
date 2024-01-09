@@ -13,6 +13,7 @@ import Contact from "components/Contact";
 import Blog from "components/Blog";
 import Testimonial from "components/Testimonial";
 import HeroVideo from "components/HeroVideo";
+import Team from "components/Team";
 
 export default function Home() {
   return (
@@ -24,8 +25,9 @@ export default function Home() {
         </div>
       </section>
       <Brands />
-      {/* <PropertyListings /> */}
+      <PropertyListings />
       <Testimonial />
+      <Team />
       <SAM />
       <Blog />
       <Services />

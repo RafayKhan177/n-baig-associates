@@ -58,18 +58,6 @@ const Hero = () => {
               <h6 className="text-md">{heroContent.dynamicText}</h6>
 
               <div className="mt-20">
-                {/* <form onSubmit={handleSubmit}>
-                  <div className="flex flex-wrap gap-5">
-                    <input
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      type="text"
-                      placeholder="Enter your email address"
-                      className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
-                    />
-                  
-                  </div>
-                </form> */}
                   <button
                       aria-label="get started button"
                       className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
@@ -82,46 +70,6 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-
-            {/* <div className="animate_right hidden md:w-1/2 lg:block">
-              <div className="relative 2xl:-mr-7.5">
-                <Image
-                  src="/images/shape/shape-01.png"
-                  alt="shape"
-                  width={46}
-                  height={246}
-                  className="absolute -left-11.5 top-0"
-                />
-                <Image
-                  src="/images/shape/shape-02.svg"
-                  alt="shape"
-                  width={36.9}
-                  height={36.7}
-                  className="absolute bottom-0 right-0 z-10"
-                />
-                <Image
-                  src="/images/shape/shape-03.svg"
-                  alt="shape"
-                  width={21.64}
-                  height={21.66}
-                  className="absolute -right-6.5 bottom-0 z-1"
-                />
-                <div className=" relative aspect-[700/444] w-full">
-                  <Image
-                    className="shadow-solid-l dark:hidden rounded-lg"
-                    src="https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table_105762-2050.jpg?w=826&t=st=1704568085~exp=1704568685~hmac=aaea52599b79d29e2ac5c862ec731660abe5e43ac42e473995dd44153b254100"
-                    alt="Hero"
-                    fill
-                  />
-                  <Image
-                    className="hidden shadow-solid-l dark:block"
-                    src="/images/hero/hero-dark.svg"
-                    alt="Hero"
-                    fill
-                  />
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>

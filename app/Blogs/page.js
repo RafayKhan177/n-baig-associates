@@ -1,3 +1,7 @@
+"use client"
+
+import Tabs from "components/Tabs"
+
 export default function page() {
-  return <main>soon</main>;
+  return <main><Tabs/></main>;
 }

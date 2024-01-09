@@ -21,12 +21,12 @@ export default function CarouselCard() {
           }}
         />
         <p className="h-14 ml-6">...</p>
-        <SimpleGrid cols={{ base: 1, sm: 3 }} style={{ marginLeft: 15 }}>
+        <SimpleGrid cols={{ base: 1, sm: 3 }} >
           {PropertiesData.map((item, index) => {
             return <SingleListing key={index} item={item} />;
           })}
         </SimpleGrid>
-        <div className="ml-5">
+        <div>
           <KnowMore />
         </div>
       </div>

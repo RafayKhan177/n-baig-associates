@@ -38,7 +38,7 @@ const SingleListing = ({ item }) => {
           radius="md"
           withBorder
           padding="xl"
-          style={{ width: "22rem" }}
+          style={{ width: "auto" }}
         >
           <Card.Section>
             <AwesomeSlider
