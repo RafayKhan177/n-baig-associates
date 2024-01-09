@@ -12,13 +12,19 @@ import Pricing from "components/Pricing";
 import Contact from "components/Contact";
 import Blog from "components/Blog";
 import Testimonial from "components/Testimonial";
+import HeroVideo from "components/HeroVideo";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <section class="relative">
+        <HeroVideo />
+        <div class="absolute z-99 top-0">
+          <Hero />
+        </div>
+      </section>
       <Brands />
-      <PropertyListings />
+      {/* <PropertyListings /> */}
       <Testimonial />
       <SAM />
       <Blog />
