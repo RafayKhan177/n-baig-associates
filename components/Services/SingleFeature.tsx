@@ -2,9 +2,18 @@ import React from "react";
 import { Feature } from "types/feature";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Button } from "@mantine/core";
+import Link from "next/link";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, description } = feature;
+  const { icon, title, description, href } = feature;
+
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length > maxLength) {
+      return text.substring(0, maxLength) + "...";
+    }
+    return text;
+  };
 
   return (
     <>
@@ -32,7 +41,10 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
           {title}
         </h3>
-        <p>{description}</p>
+        <p>{truncateText(description, 350)}</p>
+        <Link href={href}>
+          <Button bg={"#000"}>Learn More</Button>
+        </Link>
       </motion.div>
     </>
   );

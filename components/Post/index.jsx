@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import {
     Box,
@@ -13,11 +13,8 @@ import {
     StackDivider,
     useColorModeValue,
 } from '@chakra-ui/react'
-
 import Newsletter from "components/Common/Newsletter"
 import SocialMediaLinksCard from "components/Common/SocialMediaLinksCard"
-import SAM from "components/SAM"
-import Team from "components/Team"
 
 export default function Post({ info }) {
     return (
@@ -71,8 +68,6 @@ export default function Post({ info }) {
                 </Text>
                 <Newsletter />
             </SimpleGrid>
-            <SAM />
-            <Team />
         </Container>
     )
 }

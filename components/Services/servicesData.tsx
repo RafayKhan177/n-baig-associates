@@ -3,46 +3,28 @@ import { Feature } from "types/feature";
 const featuresData: Feature[] = [
   {
     id: 1,
+    href: "Residential-Architechture",
     icon: "/images/icon/icon-01.svg",
-    title: "Residential Architecture",
+    title: "RESIDENTIAL ARCHITECTURE",
     description:
-      "Bring your dream home to life with exquisite designs and exceptional craftsmanship.",
+      "With expert architects on board, we unveil our artistic creativity. Our architectural plans and designs reflect a vision of modern living standards and high urban quality. We extend our services worldwide, catering to both national and international customers. Our architecture creates a sustainable and healthy environment that supports customers’ lifestyles, moods, and behaviors. Focusing on our customers.",
   },
   {
     id: 2,
+    href: "Commercial-Architecture",
     icon: "/images/icon/icon-02.svg",
-    title: "Commercial Architecture",
+    title: "COMMERCIAL ARCHITECTURE",
     description:
-      "Create functional and inspiring spaces that elevate businesses and communities.",
+      "Our commercial architectural designs embody uncompromised luxury, presenting a vast canvas of unique and high-end designs. Prioritizing comfort and grandeur, we ensure a smooth business operation environment. We pay meticulous attention to construction, creating futuristic, modern, and sustainable designs where quality, luxury, and affordability converge.",
   },
   {
     id: 3,
+    href: "Construction",
     icon: "/images/icon/icon-03.svg",
-    title: "Construction",
+    title: "CONSTRUCTION",
     description:
-      "Experience seamless project execution with our expert construction management.",
+      "We perceive construction as an art form. Understanding the need for personalization in residential projects and the scale and demands of commercial projects, we comprehend the essential elements of perfect construction. Confident in our ability to utilize available resources to create perfect proportions and sweeping angles, we deliver a standard of excellence. Our forward-thinking team of professional craftsmen, with years of experience",
   },
-  {
-    id: 4,
-    icon: "/images/icon/icon-04.svg",
-    title: "Designer Commercial Projects",
-    description:
-      "Craft unique and impactful commercial spaces that leave a lasting impression.",
-  },
-  {
-    id: 5,
-    icon: "/images/icon/icon-05.svg",
-    title: "Designer Villas",
-    description:
-      "Indulge in luxurious living with bespoke villas that redefine elegance and comfort.",
-  },
-  // {
-  //   id: 6,
-  //   icon: "/images/icon/icon-06.svg",
-  //   title: "Regular Free Updates",
-  //   description:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
-  // },
 ];
 
 export default featuresData;

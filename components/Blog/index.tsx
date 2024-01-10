@@ -2,6 +2,7 @@ import React from "react";
 import SectionHeader from "../Common/SectionHeader";
 import BlogItem from "./BlogItem";
 import BlogData from "./blogData";
+import KnowMore from "components/Common/KnowMore";
 
 const Blog = async () => {
   return (
@@ -26,6 +27,7 @@ const Blog = async () => {
             <BlogItem blog={blog} key={key} />
           ))}
         </div>
+        <KnowMore link={"#"} />
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/Properties", label: "Properties" },
   { href: "/Construction", label: "Construction" },
   { href: "/Projects", label: "Projects" },
   { href: "/Services", label: "Services" },
@@ -8,7 +7,6 @@ const navLinks = [
   { href: "/Blogs", label: "Blogs" },
   { href: "/ContactUs", label: "Talk To Us" },
   { href: "/AboutUs", label: "About Us" },
-  { href: "#", label: "More" },
 ];
 
 export default navLinks;

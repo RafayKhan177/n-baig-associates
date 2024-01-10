@@ -26,9 +26,7 @@ export default function CarouselCard() {
             return <SingleListing key={index} item={item} />;
           })}
         </SimpleGrid>
-        <div>
-          <KnowMore />
-        </div>
+        <KnowMore />
       </div>
     </section>
   );
