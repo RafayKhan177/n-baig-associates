@@ -1,4 +1,5 @@
 import { Image } from "@chakra-ui/react";
+import SAM from "components/SAM";
 import Services from "components/Services";
 
 export default function page() {
@@ -11,6 +12,7 @@ export default function page() {
         className="w-screen object-cover mb-3"
       />
       <Services />
+      <SAM />
     </section>
   );
 }

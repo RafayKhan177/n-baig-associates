@@ -10,7 +10,7 @@ export default function page() {
         height={300}
         className="w-screen object-cover mb-3"
       />
-      <PropertyListings />
+      <PropertyListings all={true} />
     </section>
   );
 }

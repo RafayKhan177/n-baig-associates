@@ -19,10 +19,10 @@ export default function Home() {
         </div>
       </section>
       <Brands />
-      <PropertyListings />
+      <PropertyListings all={false} />
       <Testimonial />
       <SAM />
-      <Blog />
+      <Blog all={false}/>
       <Services />
       <FunFact />
       <FAQ />

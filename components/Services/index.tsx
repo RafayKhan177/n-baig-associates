@@ -4,7 +4,7 @@ import featuresData from "./servicesData";
 import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
 
-const Feature = () => {
+const Index = () => {
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
@@ -37,4 +37,4 @@ const Feature = () => {
   );
 };
 
-export default Feature;
+export default Index;

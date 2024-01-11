@@ -40,6 +40,18 @@ const PropertiesData = [
     location: "City Center",
     images: [defaultImage, defaultImage, defaultImage],
     features: ["Balcony", "Gym", "Parking"],
+  }, {
+    id: 4,
+    title: "Modern City Apartment",
+    description:
+      "A stunning and modern apartment located in the heart of the city.",
+    price: 350000,
+    bedrooms: 2,
+    bathrooms: 1.5,
+    size: 1200,
+    location: "City Center",
+    images: [defaultImage, defaultImage, defaultImage],
+    features: ["Balcony", "Gym", "Parking"],
   },
 ];
 
