@@ -1,6 +1,7 @@
 import { Image } from "@chakra-ui/react";
 import { Container } from "@mantine/core";
 import SAM from "components/SAM";
+import Testimonial from "components/Testimonial";
 import Link from "next/link";
 
 export default function index({ data }) {
@@ -43,7 +44,7 @@ export default function index({ data }) {
 
                     <div class="flex items-center justify-center w-full h-96 md:w-1/2">
                         <Image
-                            class="object-cover w-full h-full max-w-2xl rounded-md"
+                            class="object-cover w-full h-full max-w-2xl rounded-md shadow-lg"
                             src={image}
                             alt="apple watch photo"
                         />
@@ -59,6 +60,9 @@ export default function index({ data }) {
             <br />
             <br />
             <SAM />
+            <br />
+            <br />
+            <Testimonial />
         </section>
     )
 }

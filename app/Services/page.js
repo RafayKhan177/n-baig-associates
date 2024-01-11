@@ -1,6 +1,7 @@
 import { Image } from "@chakra-ui/react";
 import SAM from "components/SAM";
 import Services from "components/Services";
+import Testimonial from "components/Testimonial";
 
 export default function page() {
   return (
@@ -13,6 +14,8 @@ export default function page() {
       />
       <Services />
       <SAM />
+      <br />
+      <Testimonial />
     </section>
   );
 }
