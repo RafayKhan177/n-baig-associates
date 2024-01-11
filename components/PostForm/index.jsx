@@ -5,7 +5,7 @@ import SectionHeader from "components/Common/SectionHeader";
 import { Input, Textarea, Select } from "@chakra-ui/react";
 import { Button } from "@mantine/core";
 
-export default function App() {
+export default function App({ handleSave }) {
     const [formData, setFormData] = useState({
         title: "",
         subtitle: "",
@@ -21,9 +21,8 @@ export default function App() {
         });
     };
 
-    const handleSave = () => {
-        console.log("Saved Data:", formData);
-        // Add logic to save data to your backend or perform other actions.
+    const handleClick = () => {
+        handleSave(formData)
     };
 
     const categoryOptions = ["PROJECTS", "LAWS & TAXES", "CONSTRUCTION", "LIFESTYLE", "HOME DECOR", "TOURISM", "AREA GUIDES", "ZAMEEN PRODUCT UPDATES", "TEAM"];
@@ -75,7 +74,7 @@ export default function App() {
                     value={formData.about}
                     onChange={(e) => handleChange(e, "about")}
                 />
-                <Button className=" shadow-md py-6" bg={"#000"} onClick={handleSave}>
+                <Button className=" shadow-md py-6" bg={"#000"} onClick={handleClick}>
                     Save
                 </Button>
             </div>
