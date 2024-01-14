@@ -1,16 +1,34 @@
-import React from "react";
+"use client"
+
+import { useEffect, useState } from "react";
 import SectionHeader from "../Common/SectionHeader";
 import BlogItem from "./BlogItem";
-import BlogData from "./blogData";
 import KnowMore from "components/Common/KnowMore";
+import { getBlogs } from "api/functions/get";
 
-const Blog = async ({ all }) => {
-  const slicedBlogData = all ? BlogData : BlogData.slice(0, 3);
+const Blog = ({ all, selectedCategory }) => {
+  const [blogData, setBlogData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetchedBlogData = await getBlogs();
+      setBlogData(fetchedBlogData);
+    };
+
+    fetchData();
+  }, [all]);
+
+  const filteredBlogData = blogData.filter(
+    (blog) => blog.category === selectedCategory
+  );
+
+  const sliceBlogData = all
+    ? filteredBlogData :
+    blogData.slice(0, 3)
 
   return (
     <section className="py-20 lg:py-25 xl:py-30">
       <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-        {/* <!-- Section Title Start --> */}
         <div className="animate_top mx-auto text-center">
           <SectionHeader
             headerInfo={{
@@ -20,16 +38,15 @@ const Blog = async ({ all }) => {
             }}
           />
         </div>
-        {/* <!-- Section Title End --> */}
       </div>
 
       <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
         <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-          {slicedBlogData.map((blog, key) => (
+          {sliceBlogData && sliceBlogData.map((blog, key) => (
             <BlogItem blog={blog} key={key} />
           ))}
         </div>
-        {all && <KnowMore link={"#"}/>}
+        {!all && <KnowMore link={"/Blogs"} />}
       </div>
     </section>
   );

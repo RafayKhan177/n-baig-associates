@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BlogData from "./blogData";
 
 const RelatedPost = async () => {
   return (
@@ -12,7 +11,7 @@ const RelatedPost = async () => {
         </h4>
 
         <div>
-          {BlogData.slice(0, 3).map((post, key) => (
+          {/* {BlogData.slice(0, 3).map((post, key) => (
             <div
               className="mb-7.5 flex flex-wrap gap-4 xl:flex-nowrap 2xl:gap-6"
               key={key}
@@ -31,7 +30,7 @@ const RelatedPost = async () => {
                 </Link>
               </h5>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </>

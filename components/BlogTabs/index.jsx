@@ -22,9 +22,9 @@ const categories = [
 export default function Tabs({ selectCategory, currCat }) {
 
   return (
-    <Dropdown>
+    <Dropdown >
       <DropdownTrigger>
-        <Button style={{ width: "90%",marginLeft:"5%" }} variant="bordered">
+        <Button style={{ width: "90%", marginLeft: "5%", overflow: 'hidden', fontWeight: '500' }} variant="solid" >
           {currCat || "loading"}
         </Button>
       </DropdownTrigger>
