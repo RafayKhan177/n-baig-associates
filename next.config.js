@@ -9,14 +9,7 @@ const nextConfig = {
             "images.pexel.com",
             "img.freepik.com",
             "localhost"
-        ],
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "cdn.sanity.io",
-                port: "",
-            },
-        ],
+        ]
     },
 };
 module.exports = nextConfig
