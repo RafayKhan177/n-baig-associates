@@ -40,7 +40,7 @@ export default function HeaderMenu() {
         justifyContent="space-between"
         m={0}
         p={0}
-        // textTransform="uppercase"
+      // textTransform="uppercase"
       >
         {/* Social Media Icons */}
         <Flex alignItems="center" px={1}>
@@ -184,12 +184,12 @@ export default function HeaderMenu() {
         bgColor={"#edf6f9"}
       >
         <Link
-          href="/Contribution"
+          href="/Construction"
           rel="noopener noreferrer"
           _hover={{ textDecoration: "none" }}
           style={{ fontWeight: "900", color: "#000" }}
         >
-          Build Your Own House
+          Start Construction Now
         </Link>
       </Flex>
     </Box>

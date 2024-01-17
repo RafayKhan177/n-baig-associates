@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const SAM = () => {
   const ctaContent = {
@@ -10,7 +11,6 @@ const SAM = () => {
       "With just a few clicks, choose a convenient date and time that suits you and schedule a productive and efficient meeting with our team.",
     buttonText: "Schedule your meeting",
   };
-
 
   return (
     <>
@@ -59,35 +59,37 @@ const SAM = () => {
               viewport={{ once: true }}
               className="animate_right lg:w-[45%]"
             >
-              <div className="flex items-center justify-end xl:justify-between">
-                <Image
-                  width={299}
-                  height={299}
-                  src="/images/shape/shape-06.png"
-                  alt="Saly"
-                  className="hidden xl:block"
-                />
-                <a
-                  href="signup.html"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
-                >
-                  {ctaContent.buttonText}
+              <Link href={"https://doodle.com/bp/rafaykhan/baig-associates"}>
+                <div className="flex items-center justify-end xl:justify-between">
                   <Image
-                    width={20}
-                    height={20}
-                    src="/images/icon/icon-arrow-dark.svg"
-                    alt="Arrow"
-                    className="dark:hidden"
+                    width={299}
+                    height={299}
+                    src="/images/shape/shape-06.png"
+                    alt="Saly"
+                    className="hidden xl:block"
                   />
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/images/icon/icon-arrow-light.svg"
-                    alt="Arrow"
-                    className="hidden dark:block"
-                  />
-                </a>
-              </div>
+                  <a
+                    href="signup.html"
+                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
+                  >
+                    {ctaContent.buttonText}
+                    <Image
+                      width={20}
+                      height={20}
+                      src="/images/icon/icon-arrow-dark.svg"
+                      alt="Arrow"
+                      className="dark:hidden"
+                    />
+                    <Image
+                      width={20}
+                      height={20}
+                      src="/images/icon/icon-arrow-light.svg"
+                      alt="Arrow"
+                      className="hidden dark:block"
+                    />
+                  </a>
+                </div>
+              </Link>
             </motion.div>
           </div>
         </div>

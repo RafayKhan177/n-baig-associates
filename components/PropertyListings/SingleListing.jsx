@@ -9,9 +9,11 @@ import classes from "./CarouselCard.module.css";
 import { motion } from "framer-motion";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
+import Link from "next/link";
 
 const SingleListing = ({ item }) => {
-  const { title, description, price, images, id } = item;
+  const { title, subtitle, imageUrl, price, id } = item;
+
 
   return (
     <div>
@@ -46,12 +48,12 @@ const SingleListing = ({ item }) => {
               organicArrows={false}
               className={classes.carousel}
             >
-              {images &&
+              <div className={classes.carouselSlide}>
+                <Image src={imageUrl} alt={`Property Picture`} />
+              </div>
+              {/* {images &&
                 images.map((image, index) => (
-                  <div key={index} className={classes.carouselSlide}>
-                    <Image src={image} alt={`Property Picture ${index + 1}`} />
-                  </div>
-                ))}
+                ))} */}
             </AwesomeSlider>
           </Card.Section>
 
@@ -62,19 +64,20 @@ const SingleListing = ({ item }) => {
           </Group>
 
           <Text fz="sm" c="dimmed" mt="sm">
-            {description}
+            {subtitle}
           </Text>
 
           <Group justify="space-between" mt="md">
             <div>
               <Text fz="xl" span fw={500} className={classes.price}>
-                {`$${price}`}
+                {`Rs ${price}`}
               </Text>
             </div>
-
-            <Button radius="md" bg={"dark"}>
-              More Details
-            </Button>
+            <Link href={`/Blogs/${id}`}>
+              <Button radius="md" bg={"dark"}>
+                More Details
+              </Button>
+            </Link>
           </Group>
         </Card>
       </motion.div>

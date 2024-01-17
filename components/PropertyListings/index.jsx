@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { getBlogs } from "api/functions/get";
 
 export default function CarouselCard({ all }) {
-
+console.log(all)
   const [propertiesData, setPropertiesData] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function CarouselCard({ all }) {
   }, [all]);
 
   const slicedPropertiesData = all
-    ? propertiesData :
+    === true ? propertiesData :
     propertiesData.slice(0, 3)
 
   return (
@@ -33,11 +33,11 @@ export default function CarouselCard({ all }) {
         {/* <!-- Section Title Start --> */}
         <SectionHeader
           headerInfo={{
-            title: "Our Services",
-            subtitle: "Building Your Dream Space, from Vision to Reality",
+            title: "Explore Our Services",
+            subtitle: "Turning Your Vision into Reality",
             description:
-              "We offer a comprehensive range of architectural and construction services to bring your ideas to life.",
-          }}
+              "Discover a wide array of reliable architectural and construction services aimed at transforming your concepts into tangible, quality-built spaces.",
+  }}
         />
         <p className="h-14 ml-6">...</p>
         <SimpleGrid cols={{ base: 1, sm: 3 }}>
@@ -47,7 +47,7 @@ export default function CarouselCard({ all }) {
         </SimpleGrid>
 
         {/* Hide the "Know More" button if 'all' is false */}
-        {all && <KnowMore />}
+        {all === false && <KnowMore link={"Projects"}/>}
       </div>
     </section>
   );
