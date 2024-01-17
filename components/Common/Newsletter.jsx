@@ -4,7 +4,7 @@ export default function Newsletter() {
             <div
                 class="relative z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[25px] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mr-14">
                 <h1 class="mt-0 mb-12 text-4xl font-bold tracking-tight md:text-5xl xl:text-6xl">
-                    Are you ready <br /><span class="text-danger dark:text-danger-400">for an adventure?</span>
+                    Subscribe to receive  <br /><span class="text-danger dark:text-danger-400">future updates!</span>
                 </h1>
                 <div class="mb-6 flex-row md:mb-0 md:flex">
                     <div class="relative mb-3 w-full md:mr-3 md:mb-0" data-te-input-wrapper-init>
