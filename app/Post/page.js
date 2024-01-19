@@ -1,3 +1,5 @@
+"use client"
+
 import PostForm from "components/PostForm";
 import { postDoc } from "api/functions/post";
 

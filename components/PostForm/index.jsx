@@ -6,6 +6,7 @@ import { Input, Select } from "@chakra-ui/react";
 import { Button } from "@mantine/core";
 import ReactQuill from "react-quill";
 import { formats, modules, categoryOptions } from "./FormModules"
+import 'react-quill/dist/quill.snow.css'
 
 export default function App({ handleSave }) {
     const [about, setAbout] = useState('');
