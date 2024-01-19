@@ -7,10 +7,12 @@ import SingleListing from "./SingleListing";
 import KnowMore from "../Common/KnowMore";
 import { useEffect, useState } from "react";
 import { getBlogs } from "api/functions/get";
+import { Flex } from "@chakra-ui/react";
+import { Spinner } from "@nextui-org/react";
 
 export default function CarouselCard({ all }) {
-console.log(all)
   const [propertiesData, setPropertiesData] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +20,7 @@ console.log(all)
       setPropertiesData(
         fetchedBlogData.filter((blog) => blog.category === "PROJECTS")
       );
+      setLoading(false)
     };
 
     fetchData();
@@ -37,17 +40,22 @@ console.log(all)
             subtitle: "Turning Your Vision into Reality",
             description:
               "Discover a wide array of reliable architectural and construction services aimed at transforming your concepts into tangible, quality-built spaces.",
-  }}
+          }}
         />
         <p className="h-14 ml-6">...</p>
-        <SimpleGrid cols={{ base: 1, sm: 3 }}>
-          {slicedPropertiesData.map((item, index) => {
-            return <SingleListing key={index} item={item} />;
-          })}
-        </SimpleGrid>
-
+        {loading ? ( // Show loader if loading is true
+          <Flex height="20vh" align="center" justify="center">
+            <Spinner size="xl" color="default" />
+          </Flex>
+        ) : (
+          <SimpleGrid cols={{ base: 1, sm: 3 }}>
+            {slicedPropertiesData.map((item, index) => {
+              return <SingleListing key={index} item={item} />;
+            })}
+          </SimpleGrid>
+        )}
         {/* Hide the "Know More" button if 'all' is false */}
-        {all === false && <KnowMore link={"Projects"}/>}
+        {all === false && <KnowMore link={"Projects"} />}
       </div>
     </section>
   );

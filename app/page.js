@@ -1,3 +1,5 @@
+"use client"
+
 import Hero from "components/Hero";
 import Brands from "components/Brands";
 import PropertyListings from "components/PropertyListings";
