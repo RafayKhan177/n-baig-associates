@@ -8,7 +8,7 @@ import ReactQuill from "react-quill";
 import { formats, modules, categoryOptions } from "./FormModules"
 import 'react-quill/dist/quill.snow.css'
 
-export default function App({ handleSave }) {
+export default function PostForm({ handleSave }) {
     const [about, setAbout] = useState('');
 
     const [formData, setFormData] = useState({
@@ -36,7 +36,7 @@ export default function App({ handleSave }) {
 
 
     return (
-        <section className="w-full overflow-hidden backdrop-blur-sm">
+        <section className="w-full overflow-hidden backdrop-blur-sm mt-4">
             <SectionHeader
                 headerInfo={{
                     title: "Post Form",
