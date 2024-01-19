@@ -2,17 +2,24 @@
 
 import React, { useState } from "react";
 import SectionHeader from "components/Common/SectionHeader";
-import { Input, Textarea, Select } from "@chakra-ui/react";
+import { Input, Select } from "@chakra-ui/react";
 import { Button } from "@mantine/core";
+import ReactQuill from "react-quill";
+import { formats, modules, categoryOptions } from "./FormModules"
 
 export default function App({ handleSave }) {
+    const [about, setAbout] = useState('');
+
     const [formData, setFormData] = useState({
         title: "",
         subtitle: "",
         imageUrl: "",
-        about: "",
         category: "Other", // Default category
     });
+
+    const handleEditorChange = (text) => {
+        setAbout(text);
+    };
 
     const handleChange = (e, field) => {
         setFormData({
@@ -21,11 +28,11 @@ export default function App({ handleSave }) {
         });
     };
 
-    const handleClick = () => {
-        handleSave(formData)
+    const handleSaveContent = () => {
+        handleSave({ ...formData, about: about })
     };
 
-    const categoryOptions = ["PROJECTS", "LAWS & TAXES", "CONSTRUCTION", "LIFESTYLE", "HOME DECOR", "TOURISM", "AREA GUIDES", "ZAMEEN PRODUCT UPDATES", "TEAM"];
+
 
     return (
         <section className="w-full overflow-hidden backdrop-blur-sm">
@@ -68,13 +75,9 @@ export default function App({ handleSave }) {
                     value={formData.imageUrl}
                     onChange={(e) => handleChange(e, "imageUrl")}
                 />
-                <Textarea
-                    placeholder="About"
-                    className=" shadow-md bg-slate-300 rounded-md"
-                    value={formData.about}
-                    onChange={(e) => handleChange(e, "about")}
-                />
-                <Button className=" shadow-md py-6" bg={"#000"} onClick={handleClick}>
+                <ReactQuill modules={modules} formats={formats} theme="snow" onChange={handleEditorChange} />
+
+                <Button className=" shadow-md py-6" bg={"#000"} onClick={handleSaveContent}>
                     Save
                 </Button>
             </div>

@@ -3,7 +3,7 @@
 import { NextUIProvider } from "@nextui-org/react";
 import { MantineProvider } from "@mantine/core";
 import { ChakraProvider } from "@chakra-ui/react";
-
+import 'react-quill/dist/quill.snow.css'
 import "@mantine/core/styles.css";
 
 export function Providers({ children }) {

@@ -1,5 +1,3 @@
-"use client";
-
 import {
     Box,
     Container,
@@ -78,7 +76,9 @@ export default function Post({ info }) {
                         </Stack>
                     </Stack>
                 </Stack>
-                <Text fontSize={"lg"} className="bg-slate-100 p-2 rounded">{about}</Text>
+                <Text fontSize={"lg"} className="bg-slate-100 p-2 rounded">
+                    <div dangerouslySetInnerHTML={{ __html: about }} />
+                </Text>
                 <Newsletter />
             </SimpleGrid>
         </Container>
