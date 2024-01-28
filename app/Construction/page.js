@@ -6,15 +6,15 @@ import Link from "next/link";
 
 export default function ConstructionPage() {
   return (
-    <section class="my-10 backdrop-blur-sm ">
-      <div class="mb-4 md:mb-0 w-full mx-auto relative">
-        <div class="lg:px-0  mx-6">
-          <h2 class="text-4xl font-bold text-gray-800 leading-tight">
+    <section className="my-10 backdrop-blur-sm ">
+      <div className="mb-4 md:mb-0 w-full mx-auto relative">
+        <div className="lg:px-0  mx-6">
+          <h2 className="text-4xl font-bold text-gray-800 leading-tight">
             WE ARE YOUR TRUSTED CONSTRUCTION PARTNER
           </h2>
           <Link
             href="#"
-            class="py-2 text-blue-500 font-extrabold inline-flex items-center justify-center mb-2"
+            className="py-2 text-blue-500 font-extrabold inline-flex items-center justify-center mb-2"
           >
             Let us handle all the details, from planning and permits to
             construction
@@ -25,14 +25,14 @@ export default function ConstructionPage() {
           height={300}
           alt="hero"
           src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-          class="w-screen h-67.5
+          className="w-screen h-67.5
              object-cover lg:rounded"
         />
       </div>
 
-      <div class="flex flex-col lg:flex-row lg:space-x-12  px-6">
-        <div class="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
-          <p class="pb-6">
+      <div className="flex flex-col lg:flex-row lg:space-x-12  px-6">
+        <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+          <p className="pb-6">
             Advantage old had otherwise sincerity dependent additions. It in
             adapted natural hastily is justice. Six draw you him full not mean
             evil. Prepare garrets it expense windows shewing do an. She
@@ -41,7 +41,7 @@ export default function ConstructionPage() {
             outlived peculiar rendered led six.
           </p>
 
-          <p class="pb-6">
+          <p className="pb-6">
             Difficulty on insensible reasonable in. From as went he they.
             Preference themselves me as thoroughly partiality considered on in
             estimating. Middletons acceptance discovered projecting so is so or.

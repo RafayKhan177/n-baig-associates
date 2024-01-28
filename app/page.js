@@ -14,9 +14,9 @@ import HeroVideo from "components/HeroVideo";
 export default function Home() {
   return (
     <main>
-      <section class="relative">
+      <section className="relative">
         <HeroVideo />
-        <div class="absolute z-99 top-0">
+        <div className="absolute z-99 top-0">
           <Hero />
         </div>
       </section>

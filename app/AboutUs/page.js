@@ -17,10 +17,10 @@ export default function page() {
           description: "DETAILS ABOUT THE COMPANY",
         }}
       />
-      <div class="py-16 ">
-        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-          <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-            <div class="md:5/12 lg:w-5/12">
+      <div className="py-16 ">
+        <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+          <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+            <div className="md:5/12 lg:w-5/12">
               <Image
                 src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
                 alt="image"
@@ -29,11 +29,11 @@ export default function page() {
                 height=""
               />
             </div>
-            <div class="md:7/12 lg:w-6/12">
-              <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+            <div className="md:7/12 lg:w-6/12">
+              <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
                 ABOUT BAIG ASSOCIATES
               </h2>
-              <p class="mt-6 text-gray-600">
+              <p className="mt-6 text-gray-600">
                 BAIG ASSOCIATES is a leading design, construction, development,
                 and real estate management (sales and marketing) firm
                 exclusively operating in DHA Islamabad. Based in Islamabad,
@@ -50,10 +50,10 @@ export default function page() {
             </div>
           </div>
           <div>
-            <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+            <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
               COMPANY OVERVIEW
             </h2>
-            <p class="mt-6 text-gray-600">
+            <p className="mt-6 text-gray-600">
               BAIG ASSOCIATES was the brainchild of Chairman Muhammad Rehan Baig
               whose idea was later materialized by CEO Muhammad Rehan Baig. Despite
               having a successful career in Engineering, the CEO set out to
@@ -87,10 +87,10 @@ export default function page() {
               through the legitimate process with compliance with laws, rules
               and regulations for safe and fair dealings.
             </p>
-            <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+            <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
               VISION AND MISSION
             </h2>
-            <p class="mt-6 text-gray-600">
+            <p className="mt-6 text-gray-600">
               Our vision is a modern concept of living, nothing short of
               perfection. We create masterpieces that are an embodiment of
               form-follows-function in our residential and commercial projects.

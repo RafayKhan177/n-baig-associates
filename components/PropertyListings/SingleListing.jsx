@@ -1,19 +1,10 @@
-import {
-  Card,
-  Text,
-  Group,
-  Button,
-} from "@mantine/core";
+import { Card, Text, Group, Button, Image } from "@mantine/core";
 import classes from "./CarouselCard.module.css";
 import { motion } from "framer-motion";
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
 import Link from "next/link";
-import Image from "next/image";
 
 const SingleListing = ({ item }) => {
   const { title, subtitle, imageUrl, price, id } = item;
-
 
   return (
     <div>
@@ -43,18 +34,7 @@ const SingleListing = ({ item }) => {
           style={{ width: "auto" }}
         >
           <Card.Section>
-            <AwesomeSlider
-              bullets={false}
-              organicArrows={false}
-              className={classes.carousel}
-            >
-              <div className={classes.carouselSlide}>
-                <Image fill src={imageUrl} alt={`Property Picture`} />
-              </div>
-              {/* {images &&
-                images.map((image, index) => (
-                ))} */}
-            </AwesomeSlider>
+            <Image height={160} src={imageUrl} alt={`Property Picture`} />
           </Card.Section>
 
           <Group justify="space-between" mt="lg">
