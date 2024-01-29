@@ -177,9 +177,9 @@ const Signin = () => {
                     </label>
                   </div>
 
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     Forgot Password?
-                  </a>
+                  </Link>
                 </div>
 
                 <button

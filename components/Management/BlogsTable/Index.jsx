@@ -5,6 +5,7 @@ import Table from "./Table";
 import { getBlogs } from "api/functions/get";
 import { Flex } from "@chakra-ui/react";
 import { Spinner } from "@nextui-org/react";
+import { deleteDocument } from "api/functions/post";
 
 export default function BlogsTable() {
   const [blogs, setBlogs] = useState([]);
@@ -25,6 +26,14 @@ export default function BlogsTable() {
     fetchData();
   }, []);
 
+  const handleDelete = async (id) => {
+    try {
+      await deleteDocument("blogs", id);
+    } catch (error) {
+      console.log("errror while deleting");
+    }
+  };
+
   const columns = [
     { name: "Title", uid: "title" },
     { name: "Subtitle", uid: "subtitle" },
@@ -39,7 +48,7 @@ export default function BlogsTable() {
           <Spinner size="xl" color="default" />
         </Flex>
       ) : (
-        <Table blogs={blogs} columns={columns} />
+        <Table blogs={blogs} columns={columns} handleDelete={handleDelete} />
       )}
     </section>
   );

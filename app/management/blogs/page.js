@@ -3,6 +3,7 @@ import SectionHeader from "components/Common/SectionHeader";
 import BlogsTable from "components/Management/BlogsTable/Index";
 
 export default function page() {
+
   return (
     <Container size={"lg"}>
       <br />
@@ -15,7 +16,7 @@ export default function page() {
         }}
       />
       <br />
-      <BlogsTable />
+      <BlogsTable/>
     </Container>
   );
 }

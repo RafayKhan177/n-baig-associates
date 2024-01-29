@@ -28,7 +28,7 @@ const truncateText = (text, limit) => {
   return text.substring(0, limit) + "...";
 };
 
-export default function BlogsTable({ blogs, columns }) {
+export default function BlogsTable({ blogs, columns, handleDelete }) {
   const router = useRouter();
 
   const renderCell = React.useCallback(
@@ -81,7 +81,7 @@ export default function BlogsTable({ blogs, columns }) {
               </Tooltip>
               <Tooltip color="danger" content="Delete blog">
                 <span className="text-lg text-danger cursor-pointer active:opacity-50">
-                  <DeleteIcon />
+                  <DeleteIcon onClick={() => handleDelete(id)} />
                 </span>
               </Tooltip>
             </div>
@@ -90,7 +90,7 @@ export default function BlogsTable({ blogs, columns }) {
           return truncateText(cellValue, characterLimit);
       }
     },
-    [router]
+    [router, handleDelete]
   );
 
   return (
