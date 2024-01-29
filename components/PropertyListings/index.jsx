@@ -17,6 +17,7 @@ export default function CarouselCard({ all }) {
   useEffect(() => {
     const fetchData = async () => {
       const fetchedBlogData = await getBlogs();
+      console.log(fetchData,"hi")
       setPropertiesData(
         fetchedBlogData.filter((blog) => blog.category === "PROJECTS")
       );
