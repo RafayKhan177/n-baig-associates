@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Providers>
-          <Header />
           <Lines />
           <main className="min-h-screen">{children}</main>
           <Footer />

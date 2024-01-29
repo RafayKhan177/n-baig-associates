@@ -8,6 +8,7 @@ import { getDocById } from "api/functions/get";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Container } from "@mantine/core";
+import Header from "components/Header";
 
 export default function Page() {
   const pathname = usePathname();
@@ -52,24 +53,27 @@ export default function Page() {
   };
 
   return (
-    <Container size={"lg"}>
-      {loading ? ( // Show loader if loading is true
-        <Flex height="100vh" align="center" justify="center">
-          <Spinner size="xl" />
-        </Flex>
-      ) : (
-        <>
-          <SectionHeader
-            headerInfo={{
-              title: "Post Form",
-              subtitle: "Modify Post",
-              description:
-                "We offer a comprehensive range of architectural and construction services to bring your ideas to clients.",
-            }}
-          />
-          <PostForm handleSave={handleSave} props={blogData} />
-        </>
-      )}
-    </Container>
+    <>
+      <Header admin={true} />
+      <Container size={"lg"}>
+        {loading ? ( // Show loader if loading is true
+          <Flex height="100vh" align="center" justify="center">
+            <Spinner size="xl" />
+          </Flex>
+        ) : (
+          <>
+            <SectionHeader
+              headerInfo={{
+                title: "Post Form",
+                subtitle: "Modify Post",
+                description:
+                  "We offer a comprehensive range of architectural and construction services to bring your ideas to clients.",
+              }}
+            />
+            <PostForm handleSave={handleSave} props={blogData} />
+          </>
+        )}
+      </Container>
+    </>
   );
 }

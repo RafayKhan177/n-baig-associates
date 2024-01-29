@@ -8,5 +8,11 @@ const navLinks = [
   { href: "/ContactUs", label: "Talk To Us" },
   { href: "/AboutUs", label: "About Us" },
 ];
+const adminLinks = [
+  { href: "/management", label: "Dashboard" },
+  { href: "/management/blogs", label: "All Posts" },
+  { href: "/management/post", label: "Publish Post" },
+  { href: "/", label: "Website" },
+];
 
-export default navLinks;
+export { navLinks, adminLinks };

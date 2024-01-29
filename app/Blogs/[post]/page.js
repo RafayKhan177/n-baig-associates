@@ -8,6 +8,7 @@ import PropertyListings from "components/PropertyListings";
 import { getDocById } from "api/functions/get";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Header from "components/Header";
 
 export default function Page() {
   const pathname = usePathname();
@@ -36,6 +37,7 @@ export default function Page() {
         </Flex>
       ) : (
         <>
+          <Header />
           <Post info={blogData} />
           <SAM />
           <PropertyListings />

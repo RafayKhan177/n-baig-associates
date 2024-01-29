@@ -1,12 +1,13 @@
 // Import necessary components from Chakra UI
-"use client"
+"use client";
 
 import { Box, Text, IconButton, Flex } from "@chakra-ui/react";
 import { Container } from "@mantine/core";
 import { BarChart, People } from "@mui/icons-material";
 import SectionHeader from "components/Common/SectionHeader";
 import { useRouter } from "next/navigation";
-// import { StatsGrid } from "components/Index";
+import Header from "components/Header";
+
 export default function DashboardPage() {
   const router = useRouter();
 
@@ -16,6 +17,7 @@ export default function DashboardPage() {
 
   return (
     <>
+      <Header admin={true}/>
       {/* <StatsGrid /> */}
       <Container size={"lg"}>
         <SectionHeader

@@ -1,3 +1,5 @@
+import Header from "components/Header";
+
 export default function page() {
-  return <section></section>;
+  return <Header />;
 }

@@ -1,6 +1,12 @@
 import ServiceDetails from "components/ServiceDetails";
 import servicesData from "../servicesData";
+import Header from "components/Header";
 
 export default function page() {
-  return <ServiceDetails data={servicesData[0]} />;
+  return (
+    <>
+      <Header />
+      <ServiceDetails data={servicesData[0]} />
+    </>
+  );
 }
