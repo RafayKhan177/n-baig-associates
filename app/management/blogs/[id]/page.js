@@ -30,25 +30,29 @@ export default function Page() {
   }, [pathname]);
 
   const toast = useToast();
-  const handleSave = async (data) => {
-    try {
-      const res = await updateDoc(data, "blogs");
-      if (res === true) {
+  const handleSave = async (id, data) => {
+    if (id.length > 5) {
+      try {
+        const res = await updateDoc("blogs", id, data);
+        if (res === true) {
+          toast({
+            title: "Post Modified.",
+            status: "success",
+            duration: 9000,
+            isClosable: true,
+          });
+        }
+      } catch (error) {
         toast({
-          title: "Post Modified.",
-          status: "success",
+          title: "Something Went Wrong.",
+          description: `Error: ${error}`,
+          status: "error",
           duration: 9000,
           isClosable: true,
         });
       }
-    } catch (error) {
-      toast({
-        title: "Something Went Wrong.",
-        description: `Error: ${error}`,
-        status: "error",
-        duration: 9000,
-        isClosable: true,
-      });
+    } else {
+      console.log("post not found to modify");
     }
   };
 

@@ -12,15 +12,14 @@ const Editor = dynamic(() => import("react-quill"), {
 });
 
 export default function PostForm({ handleSave, props }) {
-const [about, setAbout] = useState(props?.about || "");
+  const [about, setAbout] = useState(props?.about || "");
 
-const [formData, setFormData] = useState({
-  title: props?.title || "",
-  subtitle: props?.subtitle || "",
-  imageUrl: props?.imageUrl || "",
-  category: props?.category || "Other", // Default category
-});
-
+  const [formData, setFormData] = useState({
+    title: props?.title || "",
+    subtitle: props?.subtitle || "",
+    imageUrl: props?.imageUrl || "",
+    category: props?.category || "Other", // Default category
+  });
 
   const handleEditorChange = (text) => {
     setAbout(text);
@@ -34,7 +33,7 @@ const [formData, setFormData] = useState({
   };
 
   const handleSaveContent = () => {
-    handleSave({ ...formData, about: about });
+    handleSave(props?.id, { ...formData, about: about });
   };
 
   return (
